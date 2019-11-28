@@ -12,5 +12,6 @@ Library code is simple and easy to understand. This library provides basically 3
 Code is written without using **STM32CubeMX** tool, however you can also use CubeMX to generat I2C and MCU basic initialization code.
 
 ## Pin Connection Details
+<img src = "Images/LCD_I2C_STM32F407.png">
 
  
