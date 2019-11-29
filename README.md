@@ -14,4 +14,8 @@ Code is written without using **STM32CubeMX** tool, however you can also use Cub
 ## Pin Connection Details
 <img src = "Images/LCD_I2C_STM32F407.png">
 
+## Quick References
+* **[Setting up I2C on STM32F407](https://www.youtube.com/watch?v=1COFk1M2tak)**
+* **[Dot Matrix LCD Driver HD44780U](https://www.sparkfun.com/datasheets/LCD/HD44780.pdf)**
+
  
