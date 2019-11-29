@@ -49,6 +49,8 @@ void LCD_Send_Cmd(uint8_t cmd)
 	/* Transmit lower nibble using I2C APIs*/
 	if(HAL_I2C_IsDeviceReady(& myI2Chandle, I2C_SLAVE_ADDRESS, 1, 10) == HAL_OK)
 		HAL_I2C_Master_Transmit(& myI2Chandle,I2C_SLAVE_ADDRESS, data_l_tx, 2, 100);	
+
+	/*Provide a delay */
 	HAL_Delay(5);
 }
 
@@ -89,7 +91,9 @@ void LCD_Send_Data(uint8_t data)
 	/* Transmit lower nibble using I2C APIs*/
 	if(HAL_I2C_IsDeviceReady(& myI2Chandle, I2C_SLAVE_ADDRESS, 1, 10) == HAL_OK)
 		HAL_I2C_Master_Transmit(& myI2Chandle,I2C_SLAVE_ADDRESS, data_l_tx, 2, 100);	
-  HAL_Delay(5);
+    
+    /*Provide a delay */
+    HAL_Delay(5);
 }
 
 
