@@ -3,7 +3,7 @@
   *@file   : STM32F407_I2C_LCD16x02_Driver.c
   *@author : Sharath N
   *@brief  : LCD driver source file for interfacing 16x02 LCD on STM32Fxx MCU using I2C Serial 
-	           Interface Module
+	         Interface Module
   ********************************************************************************************
 */	
 
