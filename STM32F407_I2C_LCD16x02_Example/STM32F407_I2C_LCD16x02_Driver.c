@@ -4,7 +4,7 @@
   *@author : Sharath N
   *@brief  : LCD driver source file for interfacing 16x02 LCD on STM32Fxx MCU using I2C Serial 
 	           Interface Module
-	********************************************************************************************
+  ********************************************************************************************
 */	
 
 #include "stdint.h"
