@@ -63,6 +63,34 @@ void LCD_Send_Data(uint8_t data);
  */
 void LCD_Send_String(char *str);
 
+
+/**
+ * @brief Clears screen first, then displays the given string
+ * @param str: pointer to strings
+ * @retval None
+ */
+void LCD_Clear_Then_Display(char *str);
+
+
+
+/**
+ * @brief Display the strings on Line1
+ * @param str: pointer to strings
+ * @retval None
+ */
+void LCD_Send_String_On_Line1(char *str);
+
+
+/**
+ * @brief Display the strings on Line2
+ * @param str: pointer to strings
+ * @retval None
+ */
+void LCD_Send_String_On_Line2(char *str);
+
+
+
+
 #endif
 
 
