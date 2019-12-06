@@ -236,6 +236,45 @@ void LCD_Send_String_On_Line2(char *str)
 }
 
 
+/**
+ * @brief Display long messages of any size on LCD
+ * @param str: pointer to strings
+ * @retval None
+ */
+void LCD_Display_Long_Message(char *string)
+{
+	int i =0, count =1, j=0;
+	/*Clear display and Set position to Line1 start*/
+	LCD_Send_Cmd(LCD_CLEAR_DISPLAY);
+	LCD_Send_Cmd(LCD_SET_ROW1_COL1);
+	
+	while(string[i] != '\0')
+	{
+		LCD_Send_Data(string[i]);
+		
+		/*If we reach 1st Line end, then goto 2nd line start*/
+		if(j>=15 && (count%2 == 1))
+		{
+			count++;
+			LCD_Send_Cmd(LCD_SET_ROW2_COL1);
+		}
+		
+		/*If we reach second line end, clear display start from line1 again*/
+		if(j>=31 && (count%2 == 0))
+		{
+			count++;
+			j=0;
+			LCD_Send_Cmd(LCD_CLEAR_DISPLAY);
+			LCD_Send_Cmd(LCD_SET_ROW1_COL1);
+		}
+		
+		HAL_Delay(100);
+		i++;
+		j++;
+	}
+}
+
+
 /********************************* LCD APIs - END ************************************/
 
 

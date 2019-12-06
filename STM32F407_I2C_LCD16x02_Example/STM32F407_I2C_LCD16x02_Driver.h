@@ -33,6 +33,8 @@
 #define LCD_INCREMENT_CURSER   0x06
 #define LCD_SET_ROW1_COL1      0x80  //Force cursor to beginning ( 1st line)
 #define LCD_SET_ROW2_COL1      0xC0  //Force cursor to beginning ( 2nd line)
+#define LCD_MOVE_DISPLAY_LEFT  0x18 
+#define LCD_MOVE_DISPLAY_RIGHT 0x1C 
 
 /**
  * @brief  Initializes LCD
@@ -87,6 +89,14 @@ void LCD_Send_String_On_Line1(char *str);
  * @retval None
  */
 void LCD_Send_String_On_Line2(char *str);
+
+
+/**
+ * @brief Display long messages of any size on LCD
+ * @param str: pointer to strings
+ * @retval None
+ */
+void LCD_Display_Long_Message(char *string);
 
 
 
